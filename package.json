@@ -1,0 +1,26 @@
+{
+  "name": "keda",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www --watch",
+    "test": "mocha --watch ./test/*.spec.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.18.2",
+    "http-errors": "~1.6.3",
+    "jade": "^0.29.0",
+    "morgan": "~1.9.1",
+    "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "rewire": "^6.0.0",
+    "sinon": "^15.0.1",
+    "sinon-chai": "^3.7.0",
+    "supertest": "^6.3.3"
+  }
+}

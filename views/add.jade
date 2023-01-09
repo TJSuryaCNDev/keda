@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  p Pencatatan Baru 
+  form(method="POST", action="/add")
+    p(class="form-label") Tipe Kendaraan
+    select(id="xxx", name="type", class="form-control")
+      option(value="mobil") Mobil
+      option(value="motor") Motor
+    p(class="form-label") Waktu Masuk
+    input(type="text", name="startDate", id="startDate", class="form-control")
+    p(class="form-label") Waktu Keluar
+    input(type="text", name="endDate", id="endDate", class="form-control")
+    input(type="submit", class="btn btn-primary")
+  script(type="text/javascript",src="https://code.jquery.com/jquery-3.6.3.min.js")
+  script(type="text/javascript",src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js")
+  script(type="text/javascript",src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.14.0/jquery.timepicker.min.js")
+  script(type="text/javascript",src="https://trentrichardson.com/examples/timepicker/jquery-ui-timepicker-addon.js")
+  script(type="text/javascript",src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js")
+  script
+    $(function() {
+      $("#startDate").datetimepicker()
+      $("#endDate").datetimepicker()
+    })
